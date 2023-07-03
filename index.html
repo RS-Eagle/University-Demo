@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;600;700&display=swap" rel="stylesheet"> 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+</style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="header">
+    <section class="header ">
         <nav>
             <a href="index.html"><img src="eduford_img/logo.png" ></a>
             <div class="nav" id="navl">
@@ -37,7 +39,7 @@
         </div>
 
     </section>
-    <section class="course">
+    <section class="course mover">
         <h1>Courses We Offer</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ratione.</p>
         <div class="row">
@@ -56,7 +58,7 @@
         </div>
 
     </section>
-    <section class="campus">
+    <section class="campus mover">
         <h3>Our Global Campus</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, esse.</p>
         <div class="row">
@@ -80,7 +82,7 @@
             </div>
         </div>
     </section>
-    <section class="faci">
+    <section class="faci mover">
         <h1>Our facilities</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, magni!</p>
         <div class="row">
@@ -100,7 +102,7 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
         </div>
-        <section class="test">
+        <section class="test mover">
             <h1>What Our Student Says</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.</p>
             <div class="row">
@@ -124,14 +126,14 @@
 
     </section>
 
-    <section>
+    <section class="mover">
 
         <div class="cont">
             <h1>Want To Contact US <br> Enroll Our Courses.</h1>
             <a href="" class="class-btn">CONTACT-US</a>
         </div>
     </section>
-    <section class="footer">
+    <section class="footer ">
         <h4>ABOUT-US</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Saepe blanditiis doloremque deleniti repudiandae ducimus cupiditate iste error alias nesciunt eveniet?</p>
         <div class="icons">
@@ -153,6 +155,25 @@
         function hideMenu(){
             navl.style.display = "none"
         }
+
+        window.addEventListener("scroll", scrollrevel )
+
+        function scrollrevel(){
+        var revels = document.querySelectorAll(".mover")
+
+        for(var i = 0; i< revels.length; i++){
+            var winheight = window.innerHeight
+            var reveltop = revels[i].getBoundingClientRect().top
+            var revelpoint = 150
+
+            if(reveltop < winheight -revelpoint){
+                revels[i].classList.add("active1")
+            }else{
+                revels[i].classList.remove("active1")
+            }
+        }
+        }
+       
     </script>
 </body>
 </html>
