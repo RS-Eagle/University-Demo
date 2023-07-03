@@ -308,7 +308,7 @@ h3 {
 
 .cont {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-    url(/eduford_img/banner2.jpg);
+    url(eduford_img/banner2.jpg);
   width: 80%;
   margin: 100px auto;
   background-position: center;
